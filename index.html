@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Piñata 2go - Tienda en Línea de Piñatas Personalizadas</title>
+    <meta name="description" content="¡Encuentra las piñatas más creativas y personalizadas en Piñata 2go! Explora nuestra tienda en línea para eventos especiales.">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <h1 class="logo">Piñata 2go</h1>
+            <div class="menu-icon">&#9776;</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="bg-pink">
+        <div class="container">
+            <h2>Bienvenido a Piñata 2go</h2>
+            <p>
+                En Piñata2go fusionamos la tradición con la innovación, creando piñatas plegables
+                a base de cartón reciclado y papel china, inspiradas en la emblemática estrella de 5 picos.
+            </p>
+            <p>
+                Todas nuestras piñatas son funcionales para su almacenaje, distribución y transportación.
+                Con 7 combinaciones de colores estándar, nuestras piñatas son prácticas y fáciles de trasladar.
+            </p>
+            <a href="#productos" class="btn btn-primary">Ver productos</a>
+        </div>
+    </section>
+
+    <section id="mision-vision" class="bg-white">
+        <div class="container">
+            <h2>Misión y Visión</h2>
+            <div class="mission-vision-content">
+                <div class="mission">
+                    <h3>Misión</h3>
+                    <p>
+                        En Piñata2go, somos una empresa comercializadora y exportadora de piñatas.
+                        Buscamos enaltecer la artesanía mexicana a nivel nacional e internacional
+                        mediante innovación, pasión por el trabajo y tradiciones, compartiendo con el mundo
+                        la calidad y originalidad mexicanas.
+                    </p>
+                </div>
+                <div class="vision">
+                    <h3>Visión</h3>
+                    <p>
+                        Ser líderes mundiales en la comercialización de piñatas plegables y productos
+                        portadores de cultura nacional. Buscamos lograrlo mediante innovación constante,
+                        funcionalidad y garantía de nuestras piñatas, contribuyendo al desarrollo socioeconómico
+                        y cultural de nuestro país.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="objetivos" class="bg-gray">
+        <div class="container">
+            <h2>Objetivos</h2>
+            <p>
+                En Piñata2go, estamos comprometidos a actuar con honestidad y respeto.
+                Trabajamos con pasión, siendo proactivos, innovadores y eficientes para generar
+                una excelente relación con nuestros clientes, proveedores y colaboradores.
+            </p>
+            <p>
+                Nuestro producto revoluciona el concepto actual de una piñata, ofreciendo una
+                solución segura y divertida a los problemas de las piñatas convencionales.
+            </p>
+        </div>
+    </section>
+    
+
+    <section id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+    
+            <!-- Producto 1 -->
+            <div class="product">
+                <img src="logo.jpg" alt="Piñata personalizada para cumpleaños">
+                <div class="product-info">
+                    <h3>Producto 1</h3>
+                    <p class="description">Descripción del producto.</p>
+                    <p class="price">Precio: $19.99</p>
+                    <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
+                </div>
+            </div>
+    
+            <!-- Producto 2 -->
+            <div class="product">
+                <img src="logo.jpg" alt="Piñata temática para eventos">
+                <div class="product-info">
+                    <h3>Producto 2</h3>
+                    <p class="description">Descripción del producto.</p>
+                    <p class="price">Precio: $29.99</p>
+                    <button class="btn btn-primary" data-name="Producto 2" data-price="29.99">Agregar al Carrito</button>
+                </div>
+            </div>
+    
+            <!-- Producto 3 -->
+            <div class="product">
+                <img src="logo.jpg" alt="Piñata personalizada para bodas">
+                <div class="product-info">
+                    <h3>Producto 3</h3>
+                    <p class="description">Descripción del producto.</p>
+                    <p class="price">Precio: $39.99</p>
+                    <button class="btn btn-primary" data-name="Producto 3" data-price="39.99">Agregar al Carrito</button>
+                </div>
+            </div>
+    
+            <!-- Carrito de Compras -->
+            <div id="carrito-container">
+                <h2>Carrito de Compras</h2>
+                <ul id="carrito-lista"></ul>
+                <p>Total: $<span id="total">0.00</span></p>
+                <button class="btn btn-success" onclick="mostrarFinalizarCompra()">Finalizar Compra</button>
+            </div>
+    
+            <!-- Finalizar Compra -->
+            <div id="finalizar-compra" style="display: none;">
+                <h2>Finalizar Compra</h2>
+                <p>Ingrese la información de pago:</p>
+                <form onsubmit="completarCompra(); return false;">
+                    <!-- Agrega campos de pago, información del cliente, etc. aquí -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tarjeta">Número de Tarjeta:</label>
+                        <input type="text" id="tarjeta" name="tarjeta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Vencimiento:</label>
+                        <input type="text" id="fecha" name="fecha" required>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary">Completar Compra</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-gray">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Cuáles son los materiales de las piñatas?</h3>
+                <p>Nuestras piñatas están fabricadas a base de cartón reciclado y papel china para la decoración.</p>
+            </div>
+            <!-- Agrega más preguntas y respuestas según sea necesario -->
+        </div>
+    </section>
+
+<!-- Agrega esto donde quieras mostrar el blog en tu página -->
+<div class="blog-post">
+    <h3>Nuestra motivación</h3>
+    <p>
+        En Piñata2Go, cada piñata cuenta una historia única y emocionante. Nos esforzamos por no solo ofrecer productos de alta calidad, sino también compartir las fascinantes historias detrás de cada creación.
+        Desde las inspiraciones creativas hasta los desafíos superados durante el proceso de diseño, nuestro equipo se complace en compartir los detalles que hacen que cada piñata sea especial.
+        ¡Descubre las historias detrás de las piñatas y sumérgete en el mundo colorido y lleno de diversión de Piñata2Go!
+    </p>
+    <a href="#">Leer más</a>
+</div>
+
+
+    <section id="pedidos-personalizados" class="bg-pink">
+        <div class="container">
+            <h2>Pedidos Personalizados</h2>
+            <p>¿Quieres una piñata única para tu evento? ¡Haz tu pedido personalizado ahora!</p>
+            <a href="#contacto" class="btn btn-primary">Hacer Pedido Personalizado</a>
+        </div>
+    </section>
+
+    
+    
+
+    <section id="contacto" class="bg-black">
+        <div class="container">
+            <h2 class="text-white">Contacto</h2>
+            <p class="text-white">¿Tienes alguna pregunta? ¡Contáctanos!</p>
+            <form onsubmit="enviarMensajeWhatsapp(); return false;">
+                <label for="nombre" class="text-white">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email" class="text-white">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje" class="text-white">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="scrollTopBtn" title="Volver arriba">↑</button>
+
+    <footer class="bg-gray">
+        <div class="container">
+            <p class="text-white">&copy; 2023 Piñata 2go. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
