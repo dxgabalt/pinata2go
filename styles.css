@@ -1,20 +1,14 @@
-/* Reset de estilos */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Dancing Script', cursive;
-    line-height: 1.6;
-}
-
-/* Estilos para el encabezado (header) */
 header {
-    background-color: #6a246d;
-    color: #ffffff;
-    padding: 15px 0;
+    background-color: #ffffff;
+    color: #6a246d;
+    padding: 10px 0;
+    position: relative;
 }
 
 .container-header {
@@ -23,15 +17,41 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-size: 2.5em;
-    font-family: 'Pacifico', cursive; /* Agregamos una fuente más elegante */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
+.logo-img {
+    max-width: 150px;
+    height: 85px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+
 .menu-icon {
-    font-size: 2em;
+    font-size: 2.5em;
     cursor: pointer;
-    display: none; /* Ocultamos el ícono del menú en pantallas más grandes */
+    display: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons .icon {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.search-icon {
+    position: relative;
+}
+
+.search-icon input {
+    padding-left: 25px;
 }
 
 nav {
@@ -42,25 +62,29 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-nav li {
+nav ul li {
     margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2em;
+    color: #6a246d;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ff91af;
+    color: #b359b6;
 }
 
-/* Mostramos el ícono del menú solo en pantallas más pequeñas */
+/* ... (Estilos posteriores) ... */
+
+/* Estilos responsivos */
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -72,73 +96,107 @@ nav a:hover {
         position: absolute;
         top: 60px;
         left: 0;
+        background-color: #e1e1e1;
         width: 100%;
-        background-color: #4c1743; /* Cambiamos el color de fondo del menú en dispositivos móviles */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
 
     nav.active {
         display: flex;
     }
 
-    nav a {
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        box-sizing: border-box;
+    nav ul {
+        flex-direction: column;
     }
 
-    nav a:hover {
-        background-color: #6a246d;
+    nav ul li {
+        margin: 10px 0;
     }
 }
 
-/* Estilos para la sección de inicio */
-#inicio {
+section {
+    padding: 60px 0;
+}
+
+.bg-white {
     background-color: #ffffff;
     color: #6a246d;
-    text-align: center;
-    padding: 80px 0; /* Aumentamos el espacio interno para un aspecto más llamativo */
 }
 
-#inicio h2 {
-    font-size: 3em;
+.bg-gray {
+    background-color: #f0f0f0;
+    color: #6a246d;
+}
+
+.bg-black {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #6a246d;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+#inicio {
+    background-color: #ffffff;
+    padding: 80px 0; /* Aumentamos el espaciado interno */
+    text-align: center; /* Centramos el contenido */
+}
+
+.section-title {
+    color: #6a246d;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: 'Pacifico', cursive; /* Fuente más elegante para el título */
 }
 
-#inicio p {
+.section-description {
+    color: #333; /* Color de texto más oscuro */
     font-size: 1.2em;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-#inicio .btn {
+.btn-primary {
     background-color: #6a246d;
     color: #ffffff;
-    font-size: 1.5em;
-    padding: 15px 30px;
+    padding: 10px 20px;
+    font-size: 1.2em;
     text-decoration: none;
-    border-radius: 8px; /* Esquinas redondeadas para un aspecto más suave */
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-#inicio .btn:hover {
-    background-color: #4c1743; /* Cambio de color al pasar el mouse */
+.btn-primary:hover {
+    background-color: #522061; /* Color ligeramente más oscuro al pasar el mouse */
 }
 
-
-/* Estilos para la sección de Misión y Visión */
 #mision-vision {
     background-color: #ffffff;
-    color: #6a246d;
-    padding: 30px 0;
+    padding: 35px 0;
+    text-align: center;
 }
 
-#mision-vision h2 {
-    font-size: 3em;
-    text-align: center;
+.section-title {
+    color: #6a246d;
+    font-size: 2.5em;
     margin-bottom: 40px;
-    font-family: 'Pacifico', cursive;
 }
 
 .mission-vision-content {
@@ -149,471 +207,560 @@ nav a:hover {
 
 .mission,
 .vision {
-    width: 48%;
-    text-align: center;
-    margin-bottom: 40px;
+    width: 45%; /* Ajustamos el ancho de las secciones para un diseño más equilibrado */
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Añadimos un borde para resaltar cada sección */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadimos una sombra sutil */
 }
 
 .mission h3,
 .vision h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
     color: #6a246d;
 }
 
 .mission p,
 .vision p {
-    font-size: 1.2em;
+    color: #333;
+    font-size: 1.1em;
     line-height: 1.6;
 }
 
-/* Añade un poco de espacio entre las secciones */
-.mission + .vision {
-    margin-left: 4%;
-}
-
-/* Añade una sutil sombra a las secciones para destacar */
-.mission, .vision {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto de elevación al pasar el mouse */
-.mission:hover, .vision:hover {
-    transform: translateY(-10px);
-}
-
-/* Estilos para la sección de Objetivos */
 #objetivos {
-    background-color: #7b7b7b;
-    color: #ffffff;
+    background-color: #f0f0f0;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: #6a246d;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.objectives-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.objective {
+    width: 45%; /* Ajustamos el ancho de las secciones para un diseño más equilibrado */
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Añadimos un borde para resaltar cada sección */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadimos una sombra sutil */
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+
+
+
+#productos {
     padding: 80px 0;
 }
 
-#objetivos h2 {
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 40px;
-    font-family: 'Pacifico', cursive;
-}
-
-#objetivos p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Agrega un poco de espacio entre los párrafos */
-#objetivos p + p {
-    margin-top: 20px;
-}
-
-/* Estilo de borde redondeado y sombra */
-#objetivos {
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para la sección de productos */
-#productos {
-    background-color: #ffffff;
-    padding: 50px 0;
-}
-
-#productos h2 {
+.section-title {
+    color: #6a246d;
     font-size: 2.5em;
-    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.filter-search {
     margin-bottom: 30px;
 }
 
+.filter-search input,
+.filter-search select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .product {
-    text-align: center;
-    margin-bottom: 40px;
-    border: 1px solid #ddd; /* Añadido para bordes entre productos */
+    width: 48%; /* Ajustamos el ancho de los productos para un diseño más equilibrado */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
 }
 
 .product img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
 }
 
 .product-info {
-    margin-top: 20px;
-}
-
-.product h3 {
+    text-align: center;
     margin-top: 10px;
-    font-size: 1.5em;
 }
 
-.product .description {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-.product .price {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+.price {
+    font-weight: bold;
     color: #6a246d;
+    margin-top: 10px;
 }
 
-.product button {
+.btn-primary {
     background-color: #6a246d;
-    color: #ffffff;
-    font-size: 1.1em;
-    padding: 10px 20px;
-    text-decoration: none;
+    color: #fff;
     border: none;
+    padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.product button:hover {
-    background-color: #4c1743;
+.btn-primary:hover {
+    background-color: #4e174e;
 }
-
-/* Estilos para la sección del Carrito de Compras */
-#carrito-container {
-    background-color: #6a246d;
-    color: #ffffff;
-    padding: 40px;
+#carrito-container,
+#finalizar-compra {
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#carrito-container h2 {
-    font-size: 2.5em;
-    text-align: center;
+#carrito-container h2,
+#finalizar-compra h2 {
+    color: #6a246d;
+    font-size: 1.8em;
     margin-bottom: 20px;
-    font-family: 'Pacifico', cursive;
 }
 
 #carrito-lista {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #carrito-lista li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-#carrito-lista li span {
-    font-weight: bold;
-    margin-right: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
 }
 
 #total {
-    font-size: 1.5em;
+    color: #6a246d;
     font-weight: bold;
-    color: #ffcc00; /* Amarillo brillante para resaltar el total */
 }
 
 .btn-success {
-    background-color: #28a745;
-    color: #ffffff;
-    font-size: 1.2em;
-    padding: 15px 30px;
+    background-color: #4caf50;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    transition: background-color 0.3s ease;
 }
 
 .btn-success:hover {
-    background-color: #218838;
-}
-
-/* Estilos para la sección de Finalizar Compra */
-#finalizar-compra {
-    background-color: #4c1743;
-    color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    display: none;
-}
-
-#finalizar-compra h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Pacifico', cursive;
+    background-color: #45a049;
 }
 
 #finalizar-compra p {
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
-    font-size: 1.2em;
-    display: block;
-}
-
-.form-group input {
+#finalizar-compra input {
     width: 100%;
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ffffff;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 .btn-primary {
-    background-color: #ffcc00;
-    color: #4c1743;
-    font-size: 1.2em;
-    padding: 15px 30px;
+    background-color: #6a246d;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #e0a800;
+    background-color: #4e174e;
 }
 
 
-
-
-/* Estilos para la sección de Contacto */
-#contacto {
-    background-color: #000;
-    color: #fff;
-    padding: 80px 0;
-}
-
-#contacto h2 {
-    font-size: 3em;
-    margin-bottom: 30px;
-}
-
-#contacto p {
-    font-size: 1.2em;
-    margin-bottom: 50px;
-}
-
-#contacto form {
-    max-width: 600px;
-    margin: auto;
-}
-
-#contacto label {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-#contacto input,
-#contacto textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#contacto button {
-    background-color: #6a246d;
-    color: #fff;
-    font-size: 1.2em;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-}
-
-#contacto button:hover {
-    background-color: #4c1743;
-}
-/* Estilos para el botón de Volver Arriba */
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    font-size: 1.5rem;
     background-color: #6a246d;
-    color: #fff;
-    font-size: 2em;
-    padding: 15px;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
     display: none;
 }
 
-#scrollTopBtn:hover {
-    background-color: #4c1743;
+.blog-post {
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    margin-bottom: 40px;
+    text-align: justify;
 }
 
-/* Estilos para el pie de página (Footer) */
-footer {
-    background-color: #4c1743;
-    color: #4c1743;
-    text-align: center;
-    padding: 20px 0;
+.blog-post h3 {
+    color: #6a246d; /* Color púrpura */
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
-footer p {
+.blog-post p {
+    color: #333; /* Texto oscuro */
     font-size: 1.2em;
-    margin: 0;
-    color: #4c1743;
+    line-height: 1.6;
+}
+
+.blog-post a {
+    color: #6a246d; /* Color púrpura */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.blog-post a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
 }
 
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-        font-size: 1.5em;
-        cursor: pointer;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        background-color: #6a246d;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* Añadido para ocupar todo el ancho */
-    }
-
-    nav a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 1.5em;
-        padding: 15px;
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box; /* Añadido para corregir problemas de caja */
-    }
-
-    nav a:hover {
-        background-color: #4c1743;
-    }
-}
-
-/* Estilos para la sección de Preguntas Frecuentes */
 #faq {
-    background-color: #f1f1f1;
-    padding: 40px 0;
+    background-color: #f2f2f2; /* Fondo gris claro */
+    padding: 80px 0;
+    text-align: center;
 }
 
 #faq h2 {
-    text-align: center;
+    color: #333; /* Texto oscuro */
     font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #4c1743;
+    margin-bottom: 40px;
 }
 
 .faq-item {
-    border-bottom: 1px solid #d1d1d1;
-    padding: 20px 0;
+    width: 60%;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sutil sombra */
 }
 
 .faq-item h3 {
+    color: #6a246d; /* Color púrpura */
     font-size: 1.8em;
-    color: #4c1743;
     margin-bottom: 10px;
 }
 
 .faq-item p {
-    font-size: 1.2em;
-    color: #666;
-}
-/* Estilos para la entrada de Blog */
-.blog-post {
-    background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    color: #666; /* Texto gris oscuro */
+    font-size: 1.1em;
 }
 
-.blog-post h3 {
-    font-size: 2.2em;
-    color: #4c1743;
-    margin-bottom: 15px;
+
+#pedidos-personalizados {
+    background-color: #000000; /* Color rosa más claro */
+    padding: 50px 0;
+    text-align: center;
 }
 
-.blog-post p {
-    font-size: 1.2em;
-    color: #666;
-    line-height: 1.6;
+#pedidos-personalizados h2 {
+    color: #ffffff; /* Color púrpura */
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.blog-post a {
-    display: inline-block;
-    background-color: #4c1743;
-    color: #fff;
-    padding: 10px 20px;
+#pedidos-personalizados p {
+    color: #fff; /* Texto en blanco */
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#pedidos-personalizados a.btn-primary {
+    background-color: #6a246d; /* Botón de color púrpura */
+    color: #fff; /* Texto en blanco */
+    padding: 15px 30px;
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
-.blog-post a:hover {
-    background-color: #6a246d;
+#pedidos-personalizados a.btn-primary:hover {
+    background-color: #4e174e; /* Cambio de color al pasar el ratón */
 }
 
-/* Estilos para la entrada de Blog */
-.blog-post {
-    background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+#newsletter {
+    background-color: #ffffff; /* Color rosa más claro */
+    padding: 50px 0;
+    text-align: center;
 }
 
-.blog-post h3 {
-    font-size: 2.2em;
-    color: #4c1743;
-    margin-bottom: 15px;
-}
-
-.blog-post p {
-    font-size: 1.2em;
-    color: #666;
-    line-height: 1.6;
+#newsletter h2 {
+    color: #6a246d; /* Color púrpura */
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.blog-post a {
-    display: inline-block;
-    background-color: #4c1743;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+#newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.blog-post a:hover {
-    background-color: #6a246d;
+#newsletter input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #6a246d; /* Borde color púrpura */
+    border-radius: 5px;
+}
+
+#newsletter label {
+    display: flex;
+    align-items: center;
+    color: #6a246d; /* Color púrpura */
+    margin: 10px 0;
+}
+
+#newsletter input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#newsletter button.btn-primary {
+    background-color: #6a246d; /* Botón de color púrpura */
+    color: #fff; /* Texto en blanco */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter button.btn-primary:hover {
+    background-color: #4e174e; /* Cambio de color al pasar el ratón */
+}
+
+#ventajas {
+    background-color: #fff; /* Fondo blanco */
+    padding: 80px 0;
+    text-align: center;
+}
+
+#ventajas h2 {
+    color: #6a246d; /* Color púrpura */
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.ventajas-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ventaja-item {
+    width: 45%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #6a246d12; /* Fondo rosa más claro */
+    border-radius: 10px;
+    text-align: left;
+}
+
+.ventaja-item i {
+    font-size: 2em;
+    color: #6a246d; /* Color púrpura */
+    margin-bottom: 10px;
+}
+
+.ventaja-item h3 {
+    color: #6a246d; /* Color púrpura */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.ventaja-item p {
+    color: #333; /* Texto oscuro */
+    font-size: 1.1em;
+}
+
+
+#contacto {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 50px 0;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#contacto form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+#contacto form input,
+#contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco transparente */
+    color: #fff;
+}
+
+#contacto form button {
+    background-color: #6a246d; /* Púrpura */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+#contacto form button:hover {
+    background-color: #492154; /* Púrpura más oscuro al pasar el mouse */
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #ddd; /* Fondo gris claro */
+    padding: 50px 0;
+}
+
+#pagos {
+    padding: 30px 0;
+}
+
+#pagos h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.iconos-pagos {
+    font-size: 2em;
+    color: #6a246d; /* Púrpura */
+}
+
+.container {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #6a246d; /* Púrpura */
+    margin-right: 15px;
+}
+
+/* Estilos para el texto de derechos reservados */
+.footer-section p {
+    font-size: 1.2em;
+    color: #6a246d; /* Texto blanco */
+}
+
+
+@media screen and (max-width: 600px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .header-icons {
+        display: none;
+    }
+}
+
+/* Personalizar el scroll */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scroll */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6a246d; /* Color del scroll */
+    border-radius: 10px; /* Bordes redondeados del scroll */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd; /* Color del fondo del scroll */
 }

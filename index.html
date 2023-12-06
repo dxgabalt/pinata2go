@@ -16,8 +16,17 @@
 <body>
     <header>
         <div class="container-header">
-            <h1 class="logo">Piñata 2go</h1>
-            <div class="menu-icon">&#9776;</div>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Piñata 2go Logo" class="logo-img">
+                <div class="menu-icon">&#9776;</div>
+            </div>
+            
+            <div class="header-icons">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i> Ubicación</div>
+                <div class="icon search-icon"><i class="fas fa-search"></i> <input type="text" placeholder="Buscar piñatas"></div>
+                <div class="icon"><i class="fas fa-shopping-bag"></i> Pedidos</div>
+                <div class="icon"><i class="fas fa-shopping-cart"></i> Mi Carrito</div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -28,24 +37,26 @@
         </div>
     </header>
 
-    <section id="inicio" class="bg-pink">
+    <section id="inicio" class="bg-white">
         <div class="container">
-            <h2>Bienvenido a Piñata 2go</h2>
-            <p>
+            <h2 class="section-title">Bienvenido a Piñata 2go</h2>
+            <p class="section-description">
                 En Piñata2go fusionamos la tradición con la innovación, creando piñatas plegables
                 a base de cartón reciclado y papel china, inspiradas en la emblemática estrella de 5 picos.
             </p>
-            <p>
+            <p class="section-description">
                 Todas nuestras piñatas son funcionales para su almacenaje, distribución y transportación.
                 Con 7 combinaciones de colores estándar, nuestras piñatas son prácticas y fáciles de trasladar.
             </p>
             <a href="#productos" class="btn btn-primary">Ver productos</a>
         </div>
     </section>
+    
+    
 
     <section id="mision-vision" class="bg-white">
         <div class="container">
-            <h2>Misión y Visión</h2>
+            <h2 class="section-title">Misión y Visión</h2>
             <div class="mission-vision-content">
                 <div class="mission">
                     <h3>Misión</h3>
@@ -68,58 +79,89 @@
             </div>
         </div>
     </section>
-
+    
     <section id="objetivos" class="bg-gray">
         <div class="container">
-            <h2>Objetivos</h2>
-            <p>
-                En Piñata2go, estamos comprometidos a actuar con honestidad y respeto.
-                Trabajamos con pasión, siendo proactivos, innovadores y eficientes para generar
-                una excelente relación con nuestros clientes, proveedores y colaboradores.
-            </p>
-            <p>
-                Nuestro producto revoluciona el concepto actual de una piñata, ofreciendo una
-                solución segura y divertida a los problemas de las piñatas convencionales.
-            </p>
+            <h2 class="section-title">Nuestros Objetivos</h2>
+            <div class="objectives-content">
+                <p class="objective">
+                    En Piñata2go, estamos comprometidos a actuar con honestidad y respeto.
+                    Trabajamos con pasión, siendo proactivos, innovadores y eficientes para generar
+                    una excelente relación con nuestros clientes, proveedores y colaboradores.
+                </p>
+                <p class="objective">
+                    Nuestro producto revoluciona el concepto actual de una piñata, ofreciendo una
+                    solución segura y divertida a los problemas de las piñatas convencionales.
+                </p>
+            </div>
         </div>
     </section>
     
 
-    <section id="productos">
+    <section id="productos" class="bg-light">
         <div class="container">
-            <h2>Nuestros Productos</h2>
+            <h2 class="section-title">Explora Nuestros Productos</h2>
     
-            <!-- Producto 1 -->
-            <div class="product">
-                <img src="logo.jpg" alt="Piñata personalizada para cumpleaños">
-                <div class="product-info">
-                    <h3>Producto 1</h3>
-                    <p class="description">Descripción del producto.</p>
-                    <p class="price">Precio: $19.99</p>
-                    <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
-                </div>
+            <!-- Filtros y Búsqueda -->
+            <div class="filter-search">
+                <input type="text" id="search" placeholder="Buscar piñatas">
+                <select id="category-filter">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <!-- Agrega más opciones según tus categorías -->
+                </select>
             </div>
     
-            <!-- Producto 2 -->
-            <div class="product">
-                <img src="logo.jpg" alt="Piñata temática para eventos">
-                <div class="product-info">
-                    <h3>Producto 2</h3>
-                    <p class="description">Descripción del producto.</p>
-                    <p class="price">Precio: $29.99</p>
-                    <button class="btn btn-primary" data-name="Producto 2" data-price="29.99">Agregar al Carrito</button>
+            <!-- Catálogo de Productos -->
+            <div class="product-list">
+                <!-- Producto 1 -->
+                <div class="product" data-category="cumpleaños">
+                    <img src="Piñata plegable capitán.webp" alt="Piñata personalizada para cumpleaños">
+                    <div class="product-info">
+                        <h3>Piñata plegable capitán                        </h3>
+                        <p class="description">Practica y divertida piñata plegable en forma de estrella con colores rojo, azul y blanco, lleno de diversión para animar tus eventos original y único.
+                        </p>
+                        <p class="price">Precio: $325 MXN</p>
+                        <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
+                    </div>
                 </div>
-            </div>
+
+                <div class="product" data-category="cumpleaños">
+                    <img src="Piñata plegable capitán.avif" alt="Piñata personalizada para cumpleaños">
+                    <div class="product-info">
+                        <h3>Piñata Navideña Plegable Color Bosque                        </h3>
+                        <p class="description">Practica y divertida piñata plegable en forma de estrella con colores verde y azul, lleno de diversión para animar tus eventos original y único.
+                        </p>
+                        <p class="price">Precio: $325 MXN</p>
+                        <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="cumpleaños">
+                    <img src="Piñata plegable muñeca.avif" alt="Piñata personalizada para cumpleaños">
+                    <div class="product-info">
+                        <h3>Piñata plegable muñeca                        </h3>
+                        <p class="description">Practica y divertida piñata plegable en forma de estrella con colores morado, blanco y rosa como una muñeca, llénala de diversión para animar tus eventos de manera original y única.
+                        </p>
+                        <p class="price">Precio: $325 MXN</p>
+                        <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
+                    </div>
+                </div>
+
+                <div class="product" data-category="cumpleaños">
+                    <img src="Piñata plegable tricolor.avif" alt="Piñata personalizada para cumpleaños">
+                    <div class="product-info">
+                        <h3>Piñata plegable tricolor                        </h3>
+                        <p class="description">Practica y divertida piñata plegable en forma de estrella con colores verde, blanco y rojo, lleno de diversión para animar tus eventos original y único.
+                        </p>
+                        <p class="price">Precio: $325 MXN</p>
+                        <button class="btn btn-primary" data-name="Producto 1" data-price="19.99">Agregar al Carrito</button>
+                    </div>
+                </div>
     
-            <!-- Producto 3 -->
-            <div class="product">
-                <img src="logo.jpg" alt="Piñata personalizada para bodas">
-                <div class="product-info">
-                    <h3>Producto 3</h3>
-                    <p class="description">Descripción del producto.</p>
-                    <p class="price">Precio: $39.99</p>
-                    <button class="btn btn-primary" data-name="Producto 3" data-price="39.99">Agregar al Carrito</button>
-                </div>
+                <!-- Producto 2 -->
+                <!-- Agrega más productos según sea necesario -->
+    
             </div>
     
             <!-- Carrito de Compras -->
@@ -154,6 +196,60 @@
             </div>
         </div>
     </section>
+    
+
+    <section id="pedidos-personalizados" class="bg-black">
+        <div class="container">
+            <h2>Pedidos Personalizados</h2>
+            <p>¿Quieres una piñata única para tu evento? ¡Haz tu pedido personalizado ahora!</p>
+            <a href="#contacto" class="btn btn-primary">Hacer Pedido Personalizado</a>
+        </div>
+    </section>
+
+    <section id="newsletter" class="bg-gray">
+        <div class="container">
+            <h2>¡Regístrate a nuestro Newsletter!</h2>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <label for="mujeres">
+                    <input type="checkbox" id="mujeres" name="mujeres"> Para Mujeres
+                </label>
+                <label for="hombres">
+                    <input type="checkbox" id="hombres" name="hombres"> Para Hombres
+                </label>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="ventajas" class="bg-white">
+        <div class="container">
+            <h2>Por qué nos eligen y repiten nuestros más de 50.000 clientes</h2>
+            <div class="ventajas-list">
+                <!-- Lista de ventajas -->
+                <div class="ventaja-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Envíos gratis</h3>
+                    <p>Envío rapidísimo en 24/48h laborales para Ciudad de México gratis a partir de $2000 MXN</p>
+                </div>
+                <div class="ventaja-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Nos importan nuestros clientes</h3>
+                    <p>Cuidamos y mimamos hasta el último detalle de los pedidos de nuestros clientes.</p>
+                </div>
+                <div class="ventaja-item">
+                    <i class="fas fa-gift"></i>
+                    <h3>+10 MIL REFERENCIAS</h3>
+                    <p>Contamos con el mayor catálogo de artículos de fiesta del sector, ¡Tenemos lo que buscas!</p>
+                </div>
+                <div class="ventaja-item">
+                    <i class="fas fa-comment"></i>
+                    <h3>Atención instantánea</h3>
+                    <p>Te atenderemos por chat de manera instantánea de Lunes a Viernes de 10:00 a 18:00.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="faq" class="bg-gray">
         <div class="container">
@@ -166,28 +262,16 @@
         </div>
     </section>
 
-<!-- Agrega esto donde quieras mostrar el blog en tu página -->
-<div class="blog-post">
-    <h3>Nuestra motivación</h3>
-    <p>
-        En Piñata2Go, cada piñata cuenta una historia única y emocionante. Nos esforzamos por no solo ofrecer productos de alta calidad, sino también compartir las fascinantes historias detrás de cada creación.
-        Desde las inspiraciones creativas hasta los desafíos superados durante el proceso de diseño, nuestro equipo se complace en compartir los detalles que hacen que cada piñata sea especial.
-        ¡Descubre las historias detrás de las piñatas y sumérgete en el mundo colorido y lleno de diversión de Piñata2Go!
-    </p>
-    <a href="#">Leer más</a>
-</div>
-
-
-    <section id="pedidos-personalizados" class="bg-pink">
-        <div class="container">
-            <h2>Pedidos Personalizados</h2>
-            <p>¿Quieres una piñata única para tu evento? ¡Haz tu pedido personalizado ahora!</p>
-            <a href="#contacto" class="btn btn-primary">Hacer Pedido Personalizado</a>
-        </div>
-    </section>
-
-    
-    
+    <!-- Agrega esto donde quieras mostrar el blog en tu página -->
+    <div class="blog-post">
+        <h3>Nuestra motivación</h3>
+        <p>
+            En Piñata2Go, cada piñata cuenta una historia única y emocionante. Nos esforzamos por no solo ofrecer productos de alta calidad, sino también compartir las fascinantes historias detrás de cada creación.
+            Desde las inspiraciones creativas hasta los desafíos superados durante el proceso de diseño, nuestro equipo se complace en compartir los detalles que hacen que cada piñata sea especial.
+            ¡Descubre las historias detrás de las piñatas y sumérgete en el mundo colorido y lleno de diversión de Piñata2Go!
+        </p>
+        <a href="#">Leer más</a>
+    </div>
 
     <section id="contacto" class="bg-black">
         <div class="container">
@@ -196,25 +280,73 @@
             <form onsubmit="enviarMensajeWhatsapp(); return false;">
                 <label for="nombre" class="text-white">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
-
+    
                 <label for="email" class="text-white">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
-
+    
                 <label for="mensaje" class="text-white">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
+    
                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
             </form>
         </div>
     </section>
-
+    
     <button id="scrollTopBtn" title="Volver arriba">↑</button>
 
     <footer class="bg-gray">
+        <section id="pagos" class="bg-gray">
+            <div class="container">
+                <h2>Aceptamos pagos con Visa, Mastercard, PayPal y Banco Santander</h2>
+                <div class="iconos-pagos">
+                    <!-- Agrega aquí los iconos de Visa, Mastercard, PayPal y Banco Santander -->
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-paypal"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </section>
+    
         <div class="container">
-            <p class="text-white">&copy; 2023 Piñata 2go. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Servicio al Cliente</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Facturación electrónica</a></li>
+                        <li><a href="#">Promociones diversas vigentes</a></li>
+                        <li><a href="#">Formas de pago</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-media">
+                        <!-- Agrega aquí los enlaces a las redes sociales con los iconos correspondientes -->
+                        <a href="https://www.facebook.com/pinata2go" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/watch?v=XywBEX5y20Y" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/pinata2go/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <p>&copy; 2023 Piñata 2go. Todos los derechos reservados.</p>
         </div>
     </footer>
+    
 
     <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
